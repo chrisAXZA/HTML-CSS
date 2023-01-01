@@ -14,7 +14,7 @@
     --notch-duration: 0.333s;
     --ease: cubic-bezier(0.666, 0, 0.4, 1);
     --ease-spring: cubic-bezier(0.666, 0, 0.4, 1.2);
-    --ease-cut: cubic-bezier(0.15, 0, 0.333, 1);
+    --ease-out: cubic-bezier(0.15, 0, 0.333, 1);
     --border-width: 0.4em;
     --deep-purple: 284;
     --gold: 30;
@@ -49,4 +49,20 @@ body {
     min-height: 100vh;
     font-family: "Inter";
     font-size: var(--size);
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 37/76;
+    background: black;
+    height: var(--height);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale3d(1.1, 1.1, 1);
+    -webkit-animation: appear 1s var(--ease-out) forwards;
+    animation: appear 1s var(--ease-out) forwards;
+    --webkit-backface-visibility: hidden;
 }
