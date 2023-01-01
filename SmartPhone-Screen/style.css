@@ -66,3 +66,15 @@ body {
     animation: appear 1s var(--ease-out) forwards;
     --webkit-backface-visibility: hidden;
 }
+
+.phone::before {
+    content: "";
+    position: absolute;
+    top: var(--border-radius);
+    right: calc(var(--border-width) * -1);
+    bottom: calc(var(--border-radius));
+    left: calc(var(--border-width) * -1);
+    border: 0.5em solid hsl(var(--c-h), 20%, 30%);
+    border-left-width: 0;
+    border-right-width: 0;
+}
