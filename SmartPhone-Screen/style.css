@@ -78,3 +78,9 @@ body {
     border-left-width: 0;
     border-right-width: 0;
 }
+
+.buttons {
+    position: absolute;
+    inset: calc(var(--border-width) * -1);
+    pointer-events: none;
+}
