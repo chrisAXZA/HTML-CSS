@@ -84,3 +84,15 @@ body {
     inset: calc(var(--border-width) * -1);
     pointer-events: none;
 }
+
+.buttons .left,
+.buttons .right {
+    position: absolute;
+    width: var(--button-width);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5em;
+}
+
+
