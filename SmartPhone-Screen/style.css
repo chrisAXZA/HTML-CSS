@@ -135,3 +135,15 @@ body {
     align-items: center;
     gap: calc(var(--pad) * 2);
 }
+
+.screen-container::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background: white;
+    width: 36.6%;
+    bottom: calc(var(--pad) * 0.75);
+    height: calc(var(--pad) * 0.5);
+    border-radius: calc(var(--pad) * 0.25);
+    filter: drop-shadow(0 0.1em 0.25em rgba(0, 0, 0, 0.1));
+}
