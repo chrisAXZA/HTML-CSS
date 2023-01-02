@@ -105,3 +105,8 @@ body {
     margin-bottom: 0.5em;
 }
 
+.buttons .right {
+    left: 100%;
+    transform: scale3d(-1, -1, 1);
+    top: calc(var(--border-radius) * 3);
+}
