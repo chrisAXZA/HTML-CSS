@@ -176,3 +176,20 @@ body {
     border-bottom-left-radius: 20em;
     border-bottom-right-radius: 20em;
 }
+
+.bg .section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    /* background: radial-gradient(85% 125% at 50% 140%, black 66.6%, transparent),
+        radial-gradient(120% 120% at 50% 145%, hsl(calc(var(--g-h) - 45), 100%, 50%) 50%, transparent),
+        radial-gradient(150% 100% at 50% 80%, transparent 35%, hsl(calc(var(--g-h) + 50), 100%, 99%)); */
+    background: radial-gradient(85% 125% at 50% 140%, black 66.6%, transparent),
+        radial-gradient(120% 120% at 50% 145%, hsl(calc(var(--g-h) - 45), 100%, 50%) 50%, transparent),
+        radial-gradient(150% 100% at 50% 80%, transparent 35%, hsl(calc(var(--g-h) + 50), 100%, 99%));
+    background-color: hsl(var(--g-h), var(--g-s), var(--g-l));
+    transform: scale3d(1.1, 1.25, 1);
+    transform-origin: bottom;
+    transition: transform 1s var(--ease-out) 0.5s;
+}
