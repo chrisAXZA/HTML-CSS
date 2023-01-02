@@ -147,3 +147,11 @@ body {
     border-radius: calc(var(--pad) * 0.25);
     filter: drop-shadow(0 0.1em 0.25em rgba(0, 0, 0, 0.1));
 }
+
+.bg {
+    position: absolute;
+    inset: 0;
+    background: black;
+    border-radius: calc(var(--border-radius) - var(--pad));
+    overflow: hidden;
+}
