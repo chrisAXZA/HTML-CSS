@@ -110,3 +110,7 @@ body {
     transform: scale3d(-1, -1, 1);
     top: calc(var(--border-radius) * 3);
 }
+
+.buttons .right .button {
+    height: 9.5em;
+}
