@@ -95,4 +95,8 @@ body {
     gap: 1.5em;
 }
 
+.buttons .left {
+    right: 100%;
+    top: calc(var(--border-radius) * 2);
+}
 
