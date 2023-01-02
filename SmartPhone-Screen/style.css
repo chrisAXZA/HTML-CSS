@@ -124,3 +124,14 @@ body {
     border-top-left-radius: 0.2em;
     border-bottom-left-radius: 0.2em;
 }
+
+.screen-container {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    border: var(--pad) solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--pad) * 2);
+}
