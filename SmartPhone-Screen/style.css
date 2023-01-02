@@ -164,3 +164,15 @@ body {
     opacity: 0;
     transition: opacity 1s var(--ease-out) 0.5s;
 }
+
+.bg .section {
+    --g-h: var(--c-h);
+    --g-s: var(--c-s);
+    --g-l: var(--c-l);
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(var(--border-radius) - var(--pad));
+    border-bottom-left-radius: 20em;
+    border-bottom-right-radius: 20em;
+}
