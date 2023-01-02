@@ -100,3 +100,8 @@ body {
     top: calc(var(--border-radius) * 2);
 }
 
+.buttons .left .button:nth-child(1) {
+    height: 3em;
+    margin-bottom: 0.5em;
+}
+
