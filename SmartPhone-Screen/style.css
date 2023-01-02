@@ -114,3 +114,13 @@ body {
 .buttons .right .button {
     height: 9.5em;
 }
+
+.buttons .button {
+    background: hsl(var(--c-h), 20%, 95%);
+    height: 6em;
+    box-shadow: inset -0.15em 0 0.1em black, inset 0 0 0.1em hsl(var(--c-h), 30%, 90%),
+        inset 0 0.2em 0.1em hsl(var(--c-h), 30%, 90%), inset 0 -0.2em 0.1em hsl(var(--c-h), 30%, 90%),
+        inset -0.1em 0.333em 0.1em rgba(0, 0, 0, 0.5), inset -0.1em -0.333em 0.1em rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+}
