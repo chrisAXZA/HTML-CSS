@@ -270,3 +270,8 @@ body {
     --shadow-opacity: 0.5s;
     transition-timing-function: var(--ease-spring);
 }
+
+.notch-container:hover .content,
+.notch-container:focus-within .content {
+    --content-padding: 2em;
+}
