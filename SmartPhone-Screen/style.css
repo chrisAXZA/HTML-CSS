@@ -264,3 +264,9 @@ body {
     outline: none;
     will-change: max-height, max-width, filter;
 }
+
+.notch-container:hover,
+.notch-container:focus-within {
+    --shadow-opacity: 0.5s;
+    transition-timing-function: var(--ease-spring);
+}
