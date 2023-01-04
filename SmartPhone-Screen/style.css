@@ -288,3 +288,9 @@ body {
     pointer-events: all;
     transform: scale3d(1, 1, 1);
 }
+
+.notch-container:hover ~ .notch-blur,
+.notch-container:focus-within ~ .notch-blur {
+    opacity: 1;
+    max-height: calc(var(--notch-radius) * 2.75 + var(--pad));
+}
