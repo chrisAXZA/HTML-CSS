@@ -275,3 +275,8 @@ body {
 .notch-container:focus-within .content {
     --content-padding: 2em;
 }
+
+.notch-container:hover .content .text,
+.notch-container:focus-within .content .text {
+    opacity: 1;
+}
