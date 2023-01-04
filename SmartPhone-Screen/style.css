@@ -246,3 +246,21 @@ body {
         );
     background-color: hsl(var(--g-h), var(--g-s), var(--g-l));
 }
+
+.notch-container {
+    position: absolute;
+    z-index: 3;
+    top: var(--pad);
+    right: var(--pad);
+    left: var(--pad);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-height: calc(var(--notch-radius) * 2);
+    pointer-events: none;
+    outline: none;
+    transition: var(--notch-duration) var(--ease);
+    transition-property: max-height, max-width, filter, transform;
+    outline: none;
+    will-change: max-height, max-width, filter;
+}
