@@ -219,5 +219,30 @@ body {
     --g-s: calc(var(--c-s) - 25%);
     --g-l: calc(var(--c-l) + 20%);
     transform: scale3d(1, -1, 1) translateZ(1px);
-    
+}
+
+.bg .section:last-of-type::before {
+    /* background: radial-gradient(85% 125% at 50% 140%, black 66.6%, transparent),
+        radial-gradient(
+            120% 120% at 50% 145%,
+            hsl(calc(var(--g-h) - var(--g-hue-adjust-2, var(--g-hue-adjust, 0))), 100%, 50%) 50%,
+            transparent
+        ),
+        radial-gradient(
+            150% 100% at 50% 95%,
+            transparent 15%,
+            hsl(calc(var(--g-h) + 5), 100%, var(--g-lightness, 100%))
+        ); */
+    background: radial-gradient(85% 125% at 50% 140%, black 66.6%, transparent),
+        radial-gradient(
+            120% 120% at 50% 145%,
+            hsl(calc(var(--g-h) - var(--g-hue-adjust-2, var(--g-hue-adjust, 0))), 100%, 50%) 50%,
+            transparent
+        ),
+        radial-gradient(
+            150% 100% at 50% 95%,
+            transparent 15%,
+            hsl(calc(var(--g-h) + 5), 100%, var(--g-lightness, 100%))
+        );
+    background-color: hsl(var(--g-h), var(--g-s), var(--g-l));
 }
