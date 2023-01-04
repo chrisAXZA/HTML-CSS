@@ -177,7 +177,7 @@ body {
     border-bottom-right-radius: 20em;
 }
 
-.bg .section::before {
+.bg .section:before {
     content: "";
     position: absolute;
     inset: 0;
@@ -192,4 +192,15 @@ body {
     transform: scale3d(1.1, 1.25, 1);
     transform-origin: bottom;
     transition: transform 1s var(--ease-out) 0.5s;
+}
+
+.bg .section:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: var(--border-width) solid rgba(255, 255, 255, 0.8);
+    border-radius: inherit;
+    filter: blur(0.05em);
+    -webkit-mask-image: radial-gradient(100%, 100% at 50% 70%, black 30%, transparent 50%);
+    mask-image: radial-gradient(100%, 100% at 50% 70%, black 30%, transparent 50%);
 }
