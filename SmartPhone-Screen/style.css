@@ -413,3 +413,7 @@ body {
     content: "MusicName";
     opacity: 0.5;
 }
+
+.content .right {
+    flex-grow: 1;
+}
