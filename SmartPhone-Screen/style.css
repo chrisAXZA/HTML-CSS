@@ -300,3 +300,8 @@ body {
     --bar-height: 1em;
     --bar-opacity: 1;
 }
+
+.notch-container:focus-within .left,
+.notch-container:focus-within .right {
+    max-height: calc(100% - var(--bar-height, 0%) -var(--content-gap));
+}
