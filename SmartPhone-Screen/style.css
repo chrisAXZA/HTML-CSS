@@ -294,3 +294,9 @@ body {
     opacity: 1;
     max-height: calc(var(--notch-radius) * 2.75 + var(--pad));
 }
+
+.notch-container:focus-within {
+    max-height: calc(var(--notch-radius) * 3);
+    --bar-height: 1em;
+    --bar-opacity: 1;
+}
