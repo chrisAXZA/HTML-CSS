@@ -394,7 +394,7 @@ body {
     flex-grow: 2;
 }
 
-.content .text{
+.content .text {
     display: flex;
     flex-direction: column;
     gap: 0.333em;
@@ -402,3 +402,8 @@ body {
     opacity: var(--bar-opacity, 0);
 }
 
+.content .text:before {
+    content: "Hello Pesho";
+    order: 1;
+    text-transform: uppercase;
+}
