@@ -389,3 +389,7 @@ body {
     transition-property: max-height, opacity;
     will-change: max-height;
 }
+
+.content .left {
+    flex-grow: 2;
+}
