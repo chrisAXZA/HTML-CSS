@@ -417,3 +417,11 @@ body {
 .content .right {
     flex-grow: 1;
 }
+
+.content .title{
+    background: #1a1ab3;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 33.3%;
+    position:  relative;
+}
