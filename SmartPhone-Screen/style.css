@@ -331,3 +331,21 @@ body {
     transition-property: max-height, max-width, filter, transform;
     will-change: max-width, max-height, filter;
 }
+
+.notch {
+    position: relative;
+    background: black;
+    border-radius: var(--notch-radius);
+    pointer-events: all;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    transition: inherit;
+    transition-property: inherit;
+    will-change: inherit;
+    filter: drop-shadow(0 1em 2em hsla(0 0% 0% / var(--shadow-opacity, 0)));
+    transform: scale3d(0.375, 0.4, 1);
+    transform-origin: top;
+}
