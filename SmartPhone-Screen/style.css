@@ -305,3 +305,8 @@ body {
 .notch-container:focus-within .right {
     max-height: calc(100% - var(--bar-height, 0%) -var(--content-gap));
 }
+
+.notch-container:focus-within ~ .notch-blur {
+    max-height: calc(var(--notch-radius) * 5);
+    opacity: 1;
+}
