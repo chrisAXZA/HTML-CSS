@@ -64,7 +64,7 @@ body {
     transform: scale3d(1.1, 1.1, 1);
     -webkit-animation: appear 1s var(--ease-out) forwards;
     animation: appear 1s var(--ease-out) forwards;
-    --webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .phone::before {
@@ -309,4 +309,25 @@ body {
 .notch-container:focus-within ~ .notch-blur {
     max-height: calc(var(--notch-radius) * 5);
     opacity: 1;
+}
+
+.notch-blur {
+    position: absolute;
+    z-index: 2;
+    top: calc(var(--pad) - 3px);
+    right: calc(var(--pad) - 3px);
+    left: calc(var(--pad) - 3px);
+    height: 100%;
+    max-height: calc(var(--notch-radius) * 1.5);
+    -webkit-backdrop-filter: blur(0.2em);
+    backdrop-filter: blur(0.2em);
+    fill: blur(0.1em);
+    -webkit-mask-image: linear-gradient(to bottom, black calc(100% - var(--notch-radius)), transparent);
+    mask-image: linear-gradient(to bottom, black calc(100% - var(--notch-radius)), transparent);
+    opacity: 0;
+    transition: var(--notch-duration) ease-in-out;
+    border-radius: calc(var(--border-radius) - var(--pad));
+    transition: var(--notch-duration) var(--ease);
+    transition-property: max-height, max-width, filter, transform;
+    will-change: max-width, max-height, filter;
 }
