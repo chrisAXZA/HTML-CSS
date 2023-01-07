@@ -349,3 +349,20 @@ body {
     transform: scale3d(0.375, 0.4, 1);
     transform-origin: top;
 }
+
+.content {
+    --content-padding: 1.75;
+    --duration-height: 0.5em;
+    --content-gap: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: var(--content-padding);
+    gap: var(--content-gap);
+    font-size: 125%;
+    transition-property: padding;
+    will-change: padding;
+}
+
