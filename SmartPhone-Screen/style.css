@@ -375,4 +375,17 @@ body {
     gap: 1em;
 }
 
+.content,
+.content .left,
+.content .right,
+.content .bar,
+.content .text {
+    transition: var(--notch-duration) --ease-out;
+}
 
+.content .left,
+.content .right,
+.content .bar {
+    transition-property: max-height, opacity;
+    will-change: max-height;
+}
