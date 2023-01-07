@@ -403,7 +403,13 @@ body {
 }
 
 .content .text:before {
-    content: "Hello Pesho";
+    content: "MusicArtistName";
     order: 1;
     text-transform: uppercase;
+}
+
+.content .text:after {
+    order: 2;
+    content: "MusicName";
+    opacity: 0.5;
 }
