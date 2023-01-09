@@ -462,3 +462,11 @@ body {
     width: 25%;
     position: absolute;
 }
+
+.content .bar::before {
+    content: "1:20";
+}
+
+.content .bar:after {
+    content: "-1.48";
+}
