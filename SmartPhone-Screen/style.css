@@ -418,10 +418,20 @@ body {
     flex-grow: 1;
 }
 
-.content .title{
+.content .title {
     background: #1a1ab3;
     height: 100%;
     aspect-ratio: 1;
     border-radius: 33.3%;
-    position:  relative;
+    position: relative;
+}
+
+.content .title:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 55% 40%, #131386, #cd1385 75%, transparent) center/133.3% 133.3%;
+    background-color: yellow;
+    filter: blur(0.05em);
 }
