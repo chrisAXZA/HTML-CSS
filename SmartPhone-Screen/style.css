@@ -445,3 +445,12 @@ body {
     color: rgba(255, 255, 255, 0.5);
     opacity: var(--bar-opacity, 0);
 }
+
+.content .bar .duration {
+    position: relative;
+    height: var(--duration-height);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: calc(var(--duration-height) * 0.5);
+    overflow: hidden;
+    flex-grow: 1;
+}
