@@ -435,3 +435,13 @@ body {
     background-color: yellow;
     filter: blur(0.05em);
 }
+
+.content .bar {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-basis: 100%;
+    max-height: var(--bar-height, 0%);
+    color: rgba(255, 255, 255, 0.5);
+    opacity: var(--bar-opacity, 0);
+}
