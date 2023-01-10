@@ -261,7 +261,6 @@ body {
     outline: none;
     transition: var(--notch-duration) var(--ease);
     transition-property: max-height, max-width, filter, transform;
-    outline: none;
     will-change: max-height, max-width, filter;
 }
 
@@ -409,8 +408,8 @@ body {
 }
 
 .content .text:after {
-    order: 2;
     content: "MusicName";
+    order: 2;
     opacity: 0.5;
 }
 
@@ -586,4 +585,9 @@ input[type="radio"] {
 
 .swatch[for="silver"]:before {
     opacity: 0.75;
+}
+
+.deep-purple {
+    --c-h: var(--deep-purple);
+    --g-hue-adjust-2: -100;
 }
