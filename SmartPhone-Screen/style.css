@@ -629,3 +629,19 @@ input[type="radio"] {
 #deep-purple:checked ~ .pallette label[for="deep-purple"] {
     border-color: hsl(var(--deep-purple), 50%, 75%);
 }
+
+#gold:checked ~ .phone .bg .gold {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0s;
+}
+
+#gold:checked ~ .phone .bg .gold .section::before {
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    animation: test 1s infinite alternate-reverse;
+    transition-delay: 0s;
+}
+
+#gold:checked ~ .pallette label[for="gold"] {
+    border-color: hsl(var(--gold), 50%, 75%);
+}
