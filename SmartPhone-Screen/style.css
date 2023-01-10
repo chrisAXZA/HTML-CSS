@@ -525,3 +525,25 @@ input[type="radio"] {
     -webkit-animation: appear 0.333s var(--ease-out) forwards 0.75s;
     animation: appear 0.333s var(--ease-out) forwards 0.75s;
 }
+
+.swatch:nth-child(1) {
+    transform-origin: 80% 200%;
+}
+
+.swatch:nth-child(2) {
+    transform-origin: 60% 200%;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.swatch:nth-child(3) {
+    transform-origin: 40% 200%;
+    -webkit-animation-delay: 0.85s;
+    animation-delay: 0.85s;
+}
+
+.swatch:nth-child(4) {
+    transform-origin: 20% 200%;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
