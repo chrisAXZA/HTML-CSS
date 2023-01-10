@@ -107,7 +107,7 @@ body {
 
 .buttons .right {
     left: 100%;
-    transform: scale3d(-1, -1, 1);
+    transform: scale3d(-1, 1, 1);
     top: calc(var(--border-radius) * 3);
 }
 
@@ -302,7 +302,7 @@ body {
 
 .notch-container:focus-within .left,
 .notch-container:focus-within .right {
-    max-height: calc(100% - var(--bar-height, 0%) -var(--content-gap));
+    max-height: calc(100% - var(--bar-height, 0%) - var(--content-gap));
 }
 
 .notch-container:focus-within ~ .notch-blur {
@@ -601,7 +601,7 @@ input[type="radio"] {
     --c-h: var(--space-black);
     --g-hue-adjust: 190;
     --g-hue-adjust-2: 145;
-    --g-h-lightness: 95%;
+    --g-lightness: 95%;
 }
 
 .silver {
