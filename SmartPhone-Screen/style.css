@@ -589,5 +589,28 @@ input[type="radio"] {
 
 .deep-purple {
     --c-h: var(--deep-purple);
+    --g-hue-adjust: 60;
+}
+
+.gold {
+    --c-h: var(--gold);
     --g-hue-adjust-2: -100;
+}
+
+.space-black {
+    --c-h: var(--space-black);
+    --g-hue-adjust: 190;
+    --g-hue-adjust-2: 145;
+    --g-h-lightness: 95%;
+}
+
+.silver {
+    --c-h: var(--silver);
+    --c-s: 10%;
+    --g-hue-adjust: 30;
+    --g-lightness: 95%;
+}
+
+.silver .glow {
+    opacity: 0.25;
 }
