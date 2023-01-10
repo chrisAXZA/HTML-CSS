@@ -547,3 +547,12 @@ input[type="radio"] {
     -webkit-animation-delay: 0.9s;
     animation-delay: 0.9s;
 }
+
+.swatch:before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    border: var(--border-width) solid black;
+    background-image: radial-gradient(400% 300% at 50% 225%, transparent 20%, white);
+}
