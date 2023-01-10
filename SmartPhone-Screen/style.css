@@ -645,3 +645,19 @@ input[type="radio"] {
 #gold:checked ~ .pallette label[for="gold"] {
     border-color: hsl(var(--gold), 50%, 75%);
 }
+
+#space-black:checked ~ .phone .bg .space-black {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0s;
+}
+
+#space-black:checked ~ .phone .bg .space-black .section::before {
+    transition-delay: 0s;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    animation: test 1s infinite alternate-reverse;
+}
+
+#space-black:checked ~ .pallette label[for="space-black"] {
+    border-color: hsl(var(--space-black), 50%, 75%);
+}
