@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+h1 {
+    text-transform: uppercase;
+    text-decoration: overline;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 5px 2px 8px #00000042;
+    color: #ab0ef4;
+    /* color: rgba(140, 10, 29); */
+    /* color: rgba(140, 10, 29, 0.459); */
+    /* color: rebeccapurple; */
+    font-family: "Oswald", sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
