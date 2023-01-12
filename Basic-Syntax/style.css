@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 
+@font-face {
+    font-family: "DMSerif";
+    src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+body {
+    font-family: "DMSerif", Verdana;
+}
+
 h1 {
     text-transform: uppercase;
     text-decoration: overline;
