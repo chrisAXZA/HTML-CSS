@@ -7,7 +7,8 @@
 
 body {
     font-family: "DMSerif", Verdana;
-    background: url(./assets/img/matakaev.jpg) no-repeat center/cover;
+    /* background: url(./assets/img/matakaev.jpg) no-repeat center/cover; */
+    background: url(./assets/img/matakaev2.jpg) no-repeat center/cover;
     min-height: 100vh;
     /* VH = viewport height, 100% screen size */
     /* background: wheat; */
@@ -26,4 +27,12 @@ h1 {
     /* color: rebeccapurple; */
     font-family: "Oswald", sans-serif;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+main {
+    height: 500px;
+    width: 90%;
+    /* border: sienna solid; */
+    background: rgba(245, 245, 245, 0.5);
+    margin: 0 auto;
 }
