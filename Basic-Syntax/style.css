@@ -32,7 +32,9 @@ h1 {
 main {
     height: 500px;
     width: 90%;
-    /* border: sienna solid; */
     background: rgba(245, 245, 245, 0.5);
     margin: 0 auto;
+    border: sienna solid 2px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px sienna;
 }
