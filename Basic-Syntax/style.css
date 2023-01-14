@@ -57,10 +57,22 @@ h2 {
     margin-top: 20px;
 }
 
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
 .flexbox li {
     list-style: none;
     height: 160px;
     width: 160px;
     margin: 10px;
     background: turquoise;
+    /* active flex display interface */
+    display: flex;
+    /* center horizontally text content */
+    justify-content: center;
+    /* center vertically text content */
+    align-items: center;
 }
