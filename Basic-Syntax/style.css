@@ -5,6 +5,12 @@
     src: url(./assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
 }
 
+/* will affect styling of all of the DOM elements */
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
 body {
     font-family: "DMSerif", Verdana;
     /* background: url(./assets/img/matakaev.jpg) no-repeat center/cover; */
@@ -34,7 +40,19 @@ main {
     width: 90%;
     background: rgba(245, 245, 245, 0.5);
     margin: 0 auto;
+    padding: 15px;
     border: sienna solid 2px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 10px sienna;
+}
+
+h2 {
+    margin: 0;
+}
+
+.flexbox {
+    border: 3px solid skyblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
 }
