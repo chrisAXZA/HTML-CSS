@@ -56,3 +56,11 @@ h2 {
     padding: 20px;
     margin-top: 20px;
 }
+
+.flexbox li {
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+}
