@@ -13,6 +13,8 @@
 
 body {
     font-family: "DMSerif", Verdana;
+    /* larger images ought to be imported in css background for better performance
+    smalle images in HTML DOM */
     /* background: url(./assets/img/matakaev.jpg) no-repeat center/cover; */
     background: url(./assets/img/matakaev2.jpg) no-repeat center/cover;
     min-height: 100vh;
@@ -36,7 +38,7 @@ h1 {
 }
 
 main {
-    height: 500px;
+    min-height: 500px;
     width: 90%;
     background: rgba(245, 245, 245, 0.5);
     margin: 0 auto;
