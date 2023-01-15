@@ -81,7 +81,20 @@ h2 {
     align-items: center;
 }
 
+/* .grid h2{
+    display: inline;
+    text-align: center;
+    padding: 0;
+    border: 3px solid skyblue;
+    border-radius: 10px;
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
 .grid img {
     /* height: 100px; */
-    width: 30%;
+    width: 70%;
 }
