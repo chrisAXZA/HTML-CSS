@@ -24,7 +24,8 @@ body {
 
 h1 {
     text-transform: uppercase;
-    text-decoration: overline;
+    text-decoration: underline;
+    /* text-decoration: overline; */
     letter-spacing: 3px;
     text-align: center;
     font-size: 2.5rem;
