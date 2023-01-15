@@ -80,3 +80,8 @@ h2 {
     /* center vertically text content */
     align-items: center;
 }
+
+.grid img {
+    /* height: 100px; */
+    width: 30%;
+}
