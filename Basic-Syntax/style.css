@@ -109,3 +109,22 @@ form {
         "ta ta"
         "emp btn";
 }
+
+input,
+textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family:  "DMSerif", Verdana;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: btn;
+}
