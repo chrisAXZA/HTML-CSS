@@ -116,7 +116,9 @@ textarea {
     border: 1px solid darkblue;
     padding: 10px;
     font-size: 1.1rem;
-    font-family:  "DMSerif", Verdana;
+    font-family: "DMSerif", Verdana;
+    cursor: context-menu;
+    border-radius: 5px;
 }
 
 textarea {
@@ -127,4 +129,13 @@ textarea {
 
 #btn-submit {
     grid-area: btn;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.5s;
+}
+
+#btn-submit:hover {
+    background: lightcoral;
+    color: green;
+    border-radius: 20px;
 }
