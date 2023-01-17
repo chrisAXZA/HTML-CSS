@@ -152,11 +152,22 @@ textarea {
 #circle1 {
     height: 80px;
     width: 80px;
-    background: skyblue;
     border-radius: 150px;
+    background: skyblue;
     /* position absolute allows for position coordinates */
     position: absolute;
     /* top will be postioned relative to body */
     top: 0;
     right: 0;
+}
+
+#circle2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    background: teal;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
 }
