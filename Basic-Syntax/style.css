@@ -142,3 +142,21 @@ textarea {
     color: green;
     border-radius: 20px;
 }
+
+.absolute {
+    /* position relative set on parent element in order to constrain
+    child element's position inside of parent */
+    position: relative;
+}
+
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: skyblue;
+    border-radius: 150px;
+    /* position absolute allows for position coordinates */
+    position: absolute;
+    /* top will be postioned relative to body */
+    top: 0;
+    right: 0;
+}
