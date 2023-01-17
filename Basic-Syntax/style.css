@@ -101,6 +101,7 @@ h2 {
     width: 80%;
     /* margin-top: 10px; */
     margin: 20px auto;
+    /* display: block; */
 }
 
 form {
@@ -170,4 +171,19 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
     top: 100px;
+}
+
+/* responsive layout */
+@media screen and (max-width: 900px) {
+    /* body {
+        background: yellowgreen;
+    } */
+    .grid-container {
+        display: block;
+    }
+
+    .grid-container img {
+        width: 40%;
+        display: block;
+    }
 }
