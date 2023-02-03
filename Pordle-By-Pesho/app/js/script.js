@@ -21,4 +21,13 @@ function updateLetters(letter) {
     // let currentLetters = currentGuess.dataset.letters;
     // currentLetters += letter;
     currentGuess.dataset.letters += letter;
+    let currentTileNumber = currentGuess.dataset.letters.length;
+
+    updateTiles(currentTileNumber, letter);
+}
+
+function updateTiles(tileNumber, letter) {
+    let tile = document.querySelector(`#guessTile${tileNumber}`);
+    // tile.textContent = letter;
+    tile.innerText = letter;
 }
