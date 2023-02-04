@@ -18,10 +18,12 @@ document.addEventListener('keydown', (event) => {
 function updateLetters(letter) {
     // let currentLetters = currentGuess.dataset.letters;
     // currentLetters += letter;
-    currentGuess.dataset.letters += letter;
-    let currentTileNumber = currentGuess.dataset.letters.length;
+    if (currentGuess.dataset.letters.length < 5) {
+        currentGuess.dataset.letters += letter;
+        let currentTileNumber = currentGuess.dataset.letters.length;
 
-    updateTiles(currentTileNumber, letter);
+        updateTiles(currentTileNumber, letter);
+    }
 }
 
 function eraseLetter() {
