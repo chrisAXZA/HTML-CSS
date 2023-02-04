@@ -1,6 +1,15 @@
 const lettersPattern = /^[a-zA-Z]{1}$/;
 let currentGuessCount = 1;
 let currentGuess = document.querySelector(`#guess${currentGuessCount}`);
+const wordList = [
+    'BAKER',
+    'PIZZA',
+    'PESHO',
+    'APPLE',
+    'BREAD',
+];
+const num = chooseRandomWord(wordList);
+const word = wordList[num];
 
 // detect keypress (letter, backspace, other)
 document.addEventListener('keydown', (event) => {
@@ -14,6 +23,13 @@ document.addEventListener('keydown', (event) => {
         eraseLetter();
     }
 });
+
+function chooseRandomWord(wordList) {
+    const min = Math.ceil(1);
+    const max = Math.floor(wordList.length);
+    // min and max inclusive
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 function updateLetters(letter) {
     // let currentLetters = currentGuess.dataset.letters;
