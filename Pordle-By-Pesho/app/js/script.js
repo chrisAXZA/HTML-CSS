@@ -8,12 +8,10 @@ document.addEventListener('keydown', (event) => {
     const isLetter = lettersPattern.test(keypress);
     const isBackspace = keypress === "Backspace";
 
-    // console.log('key', event.key);
-    // console.log('isLetter', isLetter);
-    // console.log('isBackspace', isBackspace);
-
     if (isLetter) {
         updateLetters(keypress);
+    } else if (isBackspace) {
+        eraseLetter();
     }
 });
 
@@ -24,6 +22,19 @@ function updateLetters(letter) {
     let currentTileNumber = currentGuess.dataset.letters.length;
 
     updateTiles(currentTileNumber, letter);
+}
+
+function eraseLetter() {
+    if (currentGuess.dataset.letters.length > 0) {
+        let currentTileNumber = currentGuess.dataset.letters.length;
+
+        currentGuess.dataset.letters = currentGuess.dataset.letters.slice(0, -1);
+        // let word = currentGuess.dataset.letters.split('');
+        // word.pop();
+        // currentGuess.dataset.letters = word.join('');
+
+        updateTiles(currentTileNumber, '');
+    }
 }
 
 function updateTiles(tileNumber, letter) {
