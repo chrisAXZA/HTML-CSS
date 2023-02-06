@@ -7,9 +7,13 @@ const wordList = [
     'PESHO',
     'APPLE',
     'BREAD',
+    'SMASH',
+    'MONEY',
+    'DOUGH',
 ];
 const num = chooseRandomWord(wordList);
 const word = wordList[num];
+console.log(word);
 
 // detect keypress (letter, backspace, other)
 document.addEventListener('keydown', (event) => {
@@ -28,7 +32,7 @@ function chooseRandomWord(wordList) {
     const min = Math.ceil(1);
     const max = Math.floor(wordList.length);
     // min and max inclusive
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 function updateLetters(letter) {
