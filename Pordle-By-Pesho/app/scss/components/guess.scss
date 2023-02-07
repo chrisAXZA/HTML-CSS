@@ -17,4 +17,16 @@
         font-size: rem(32);
         font-weight: 600;
     }
+
+    .correct {
+        background-color: hsl(120, 100%, 28%);
+    }
+
+    .included {
+        background-color: hsl(49, 51%, 47%);
+    }
+
+    .notIncluded {
+        background-color: hsl(0, 0%, 35%);
+    }
 }

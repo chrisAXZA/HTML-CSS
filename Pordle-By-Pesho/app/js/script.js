@@ -32,10 +32,21 @@ document.addEventListener('keydown', (event) => {
         // const result = submitGuess();
         // console.log(result);
         for (let i = 0; i < 5; i++) {
-            console.log(checkLetter(i));
+            // console.log(checkLetter(i));
+            revealTile(checkLetter(i));
         }
     }
 });
+
+function revealTile(tileStatus) {
+    if (tileStatus === 'correct') {
+
+    } else if (tileStatus === 'included') {
+
+    } else if (tileStatus === 'notIncluded') {
+
+    }
+}
 
 function chooseRandomWord(wordList) {
     const min = Math.ceil(1);
