@@ -15,16 +15,21 @@ const num = chooseRandomWord(wordList);
 const word = wordList[num];
 console.log(word);
 
-// detect keypress (letter, backspace, other)
+// Detect keypress (letter, backspace, other)
 document.addEventListener('keydown', (event) => {
     const keypress = event.key;
     const isLetter = lettersPattern.test(keypress);
     const isBackspace = keypress === "Backspace";
+    const isEnter = keypress === "Enter";
+    const allLetters = currentGuess.dataset.letters.length === 5;
 
     if (isLetter) {
         updateLetters(keypress);
     } else if (isBackspace) {
         eraseLetter();
+    } else if (isEnter && allLetters) {
+        const result = submitGuess();
+        console.log(result);
     }
 });
 
@@ -57,6 +62,45 @@ function eraseLetter() {
 
         updateTiles(currentTileNumber, '');
     }
+}
+
+function submitGuess() {
+    const guess = currentGuess.dataset.letters;
+    const guessResult = [];
+
+    for (let i = 0; i < guess.length; i++) {
+        const guessLetter = guess[i].toUpperCase();
+        let notIncluded = true;
+        const samePosition = guessLetter === word[i];
+
+        for (let j = 0; j < word.length; j++) {
+            const wordLetter = word[j];
+            const sameLetter = guessLetter === wordLetter;
+
+            if (samePosition) {
+                guessResult.push({ 'value': 'correct', 'letter': guessLetter, 'position': i + 1 });
+                // guessResult.push({ [i + 1]: 'correct', 'letter': wordLetter });
+                notIncluded = false;
+                break;
+            } else if (sameLetter) {
+                // const letterChecked = guessResult.includes(({ v, l, p }) => p === j + 1);
+
+                // if (letterChecked) {
+                //     guessResult.push({ 'value': 'notIncluded', 'letter': guessLetter, 'position': i + 1 });
+                // }
+
+                guessResult.push({ 'value': 'included', 'letter': guessLetter, 'position': i + 1 });
+                notIncluded = false;
+                break;
+            }
+        }
+
+        if (notIncluded) {
+            guessResult.push({ 'value': 'notIncluded', 'letter': guessLetter, 'position': i + 1 });
+        }
+    }
+
+    return guessResult;
 }
 
 function updateTiles(tileNumber, letter) {
