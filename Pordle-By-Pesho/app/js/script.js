@@ -47,6 +47,8 @@ function revealTile(tileNumber, tileStatus) {
         currentTile.classList += ' included';
     } else if (tileStatus === 'notIncluded') {
         currentTile.classList += ' notIncluded';
+    }else if(tileStatus === 'backspace'){
+        currentTile.classList = 'guess__tile';
     }
 }
 
@@ -71,6 +73,7 @@ function updateLetters(letter) {
 function eraseLetter() {
     if (currentGuess.dataset.letters.length > 0) {
         let currentTileNumber = currentGuess.dataset.letters.length;
+        revealTile(currentTileNumber, 'backspace');
 
         currentGuess.dataset.letters = currentGuess.dataset.letters.slice(0, -1);
         // let word = currentGuess.dataset.letters.split('');
