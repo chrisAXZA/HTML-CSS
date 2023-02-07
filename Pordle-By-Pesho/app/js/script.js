@@ -10,6 +10,7 @@ const wordList = [
     'SMASH',
     'MONEY',
     'DOUGH',
+    'HOUSE',
 ];
 const num = chooseRandomWord(wordList);
 const word = wordList[num];
@@ -28,8 +29,11 @@ document.addEventListener('keydown', (event) => {
     } else if (isBackspace) {
         eraseLetter();
     } else if (isEnter && allLetters) {
-        const result = submitGuess();
-        console.log(result);
+        // const result = submitGuess();
+        // console.log(result);
+        for (let i = 0; i < 5; i++) {
+            console.log(checkLetter(i));
+        }
     }
 });
 
@@ -62,6 +66,23 @@ function eraseLetter() {
 
         updateTiles(currentTileNumber, '');
     }
+}
+
+function checkLetter(position) {
+    let guessedLetter = currentGuess.dataset.letters.charAt(position).toUpperCase();
+    let solutionLetter = word.charAt(position);
+
+    if (guessedLetter === solutionLetter) {
+        return 'correct';
+    } else if (checkLetterInlcuded(guessedLetter)) {
+        return 'included';
+    } else {
+        return 'notIncluded';
+    }
+}
+
+function checkLetterInlcuded(letter) {
+    return word.includes(letter);
 }
 
 function submitGuess() {
