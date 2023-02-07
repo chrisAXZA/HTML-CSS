@@ -33,18 +33,20 @@ document.addEventListener('keydown', (event) => {
         // console.log(result);
         for (let i = 0; i < 5; i++) {
             // console.log(checkLetter(i));
-            revealTile(checkLetter(i));
+            revealTile(i + 1, checkLetter(i));
         }
     }
 });
 
-function revealTile(tileStatus) {
+function revealTile(tileNumber, tileStatus) {
+    const currentTile = document.querySelector(`#guessTile${tileNumber}`);
+
     if (tileStatus === 'correct') {
-
+        currentTile.classList += ' correct';
     } else if (tileStatus === 'included') {
-
+        currentTile.classList += ' included';
     } else if (tileStatus === 'notIncluded') {
-
+        currentTile.classList += ' notIncluded';
     }
 }
 
