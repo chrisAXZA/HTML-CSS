@@ -47,7 +47,7 @@ function revealTile(tileNumber, tileStatus) {
         currentTile.classList += ' included';
     } else if (tileStatus === 'notIncluded') {
         currentTile.classList += ' notIncluded';
-    }else if(tileStatus === 'backspace'){
+    } else if (tileStatus === 'backspace') {
         currentTile.classList = 'guess__tile';
     }
 }
