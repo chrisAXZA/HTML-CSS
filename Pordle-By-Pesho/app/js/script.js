@@ -16,6 +16,19 @@ const num = chooseRandomWord(wordList);
 const word = wordList[num];
 console.log(word);
 
+const submitGuessButton = document.querySelector('#submitBtn');
+submitGuessButton.addEventListener('click', () => {
+    const allLetters = currentGuess.dataset.letters.length === 5;
+
+    if (allLetters) {
+        for (let i = 0; i < 5; i++) {
+            revealTile(i + 1, checkLetter(i));
+        }
+    }
+});
+
+
+
 // Detect keypress (letter, backspace, other)
 document.addEventListener('keydown', (event) => {
     const keypress = event.key;
@@ -28,14 +41,16 @@ document.addEventListener('keydown', (event) => {
         updateLetters(keypress);
     } else if (isBackspace) {
         eraseLetter();
-    } else if (isEnter && allLetters) {
-        // const result = submitGuess();
-        // console.log(result);
-        for (let i = 0; i < 5; i++) {
-            // console.log(checkLetter(i));
-            revealTile(i + 1, checkLetter(i));
-        }
-    }
+    } 
+    
+    // else if (isEnter && allLetters) {
+    //     // const result = submitGuess();
+    //     // console.log(result);
+    //     for (let i = 0; i < 5; i++) {
+    //         // console.log(checkLetter(i));
+    //         revealTile(i + 1, checkLetter(i));
+    //     }
+    // }
 });
 
 function revealTile(tileNumber, tileStatus) {
