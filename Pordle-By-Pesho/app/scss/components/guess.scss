@@ -55,6 +55,7 @@
     background: hsl(345deg 100% 47%);
     color: white;
     transform: translateY(-6px);
+    transition: transform 250ms;
 }
 
 .pushable:active .front {
