@@ -27,8 +27,6 @@ submitGuessButton.addEventListener('click', () => {
     }
 });
 
-
-
 // Detect keypress (letter, backspace, other)
 document.addEventListener('keydown', (event) => {
     const keypress = event.key;
