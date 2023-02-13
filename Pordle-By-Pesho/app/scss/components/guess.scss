@@ -20,14 +20,17 @@
 
     .correct {
         background-color: hsl(120, 100%, 28%);
+        border-color: hsl(120, 100%, 28%);
     }
-
+    
     .included {
         // background-color: hsl(49, 51%, 47%);
         background-color: hsl(51, 90%, 51%);
+        border-color: hsl(51, 90%, 51%);
     }
 
     .notIncluded {
         background-color: hsl(0, 0%, 35%);
+        border-color: hsl(0, 0%, 35%);
     }
 }
