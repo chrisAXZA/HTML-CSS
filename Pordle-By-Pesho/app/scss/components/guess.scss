@@ -22,7 +22,7 @@
         background-color: hsl(120, 100%, 28%);
         border-color: hsl(120, 100%, 28%);
     }
-    
+
     .included {
         // background-color: hsl(49, 51%, 47%);
         background-color: hsl(51, 90%, 51%);
@@ -35,7 +35,7 @@
     }
 }
 
-.buttonClass{
+.buttonClass {
     margin-top: 20px;
 }
 
@@ -46,8 +46,8 @@
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-  }
-  .front {
+}
+.front {
     display: block;
     padding: 12px 42px;
     border-radius: 12px;
@@ -55,8 +55,8 @@
     background: hsl(345deg 100% 47%);
     color: white;
     transform: translateY(-6px);
-  }
+}
 
-  .pushable:active .front {
+.pushable:active .front {
     transform: translateY(-2px);
-  }
+}
