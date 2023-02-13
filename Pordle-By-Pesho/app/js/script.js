@@ -42,11 +42,14 @@ function revealTile(tileNumber, tileStatus) {
     const currentTile = document.querySelector(`#guessTile${tileNumber}`);
 
     if (tileStatus === 'correct') {
-        currentTile.classList += ' correct';
+        // currentTile.classList += ' correct';
+        currentTile.classList.add('correct');
     } else if (tileStatus === 'included') {
-        currentTile.classList += ' included';
+        // currentTile.classList += ' included';
+        currentTile.classList.add('included');
     } else if (tileStatus === 'notIncluded') {
-        currentTile.classList += ' notIncluded';
+        // currentTile.classList += ' notIncluded';
+        currentTile.classList.add('notIncluded');
     } else if (tileStatus === 'backspace') {
         currentTile.classList = 'guess__tile';
     }
