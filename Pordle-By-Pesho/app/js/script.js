@@ -39,8 +39,8 @@ document.addEventListener('keydown', (event) => {
         updateLetters(keypress);
     } else if (isBackspace) {
         eraseLetter();
-    } 
-    
+    }
+
     // else if (isEnter && allLetters) {
     //     // const result = submitGuess();
     //     // console.log(result);
@@ -54,18 +54,22 @@ document.addEventListener('keydown', (event) => {
 function revealTile(tileNumber, tileStatus) {
     const currentTile = document.querySelector(`#guessTile${tileNumber}`);
 
-    if (tileStatus === 'correct') {
-        // currentTile.classList += ' correct';
-        currentTile.classList.add('correct');
-    } else if (tileStatus === 'included') {
-        // currentTile.classList += ' included';
-        currentTile.classList.add('included');
-    } else if (tileStatus === 'notIncluded') {
-        // currentTile.classList += ' notIncluded';
-        currentTile.classList.add('notIncluded');
-    } else if (tileStatus === 'backspace') {
-        currentTile.classList = 'guess__tile';
-    }
+    // if (tileStatus === 'correct') {
+    //     // currentTile.classList += ' correct';
+    //     currentTile.classList.add('correct');
+    // } else if (tileStatus === 'included') {
+    //     // currentTile.classList += ' included';
+    //     currentTile.classList.add('included');
+    // } else if (tileStatus === 'notIncluded') {
+    //     // currentTile.classList += ' notIncluded';
+    //     currentTile.classList.add('notIncluded');
+    // } else if (tileStatus === 'backspace') {
+    //     currentTile.classList = 'guess__tile';
+    // }
+
+    // currentTile.classList.add(tileStatus);
+
+    flipTile(tileNumber, tileStatus);
 }
 
 function chooseRandomWord(wordList) {
@@ -160,4 +164,25 @@ function updateTiles(tileNumber, letter) {
     let tile = document.querySelector(`#guessTile${tileNumber}`);
     // tile.textContent = letter;
     tile.innerText = letter;
+}
+
+function flipTile(tileNumber, tileState) {
+    let tile = document.querySelector(`#guessTile${tileNumber}`);
+    
+    tile.classList = 'guess__tile';
+    tile.classList.add('flip-in');
+    
+    setTimeout(() => {
+        if (tileState === 'backspace') {
+            tile.classList = 'guess__tile';
+        } else {
+            tile.classList.add(tileState);
+        }
+    });
+
+    setTimeout(() => {
+        tile.classList.remove('flip-in');
+        tile.classList.add('flip-out');
+    }, 100);
+
 }
