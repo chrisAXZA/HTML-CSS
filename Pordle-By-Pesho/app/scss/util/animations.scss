@@ -21,6 +21,9 @@
 .flip-in {
     animation: flip-in 250ms;
     animation-fill-mode: forwards;
+    // when the animation ends, animation-fill-mode: forwards will
+    // copy/pase the declarations in the final block, persisting the
+    // forwards in time
 }
 
 .flip-out {

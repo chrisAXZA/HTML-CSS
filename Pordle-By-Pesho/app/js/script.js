@@ -22,6 +22,9 @@ submitGuessButton.addEventListener('click', () => {
 
     if (allLetters) {
         for (let i = 0; i < 5; i++) {
+            // setInterval(() => {
+            //     revealTile(i + 1, checkLetter(i));
+            // }, i * 200);
             revealTile(i + 1, checkLetter(i));
         }
     }
@@ -69,7 +72,8 @@ function revealTile(tileNumber, tileStatus) {
 
     // currentTile.classList.add(tileStatus);
 
-    flipTile(tileNumber, tileStatus);
+    // flipTile(tileNumber, tileStatus);
+    flipTile2(tileNumber, tileStatus);
 }
 
 function chooseRandomWord(wordList) {
@@ -164,14 +168,38 @@ function updateTiles(tileNumber, letter) {
     let tile = document.querySelector(`#guessTile${tileNumber}`);
     // tile.textContent = letter;
     tile.innerText = letter;
+    console.log(letter);
+
+    // console.log(tile.classList.length);
+
+    // if (tile.classList.contains('has-letter')) {
+    if (letter === '') {
+        tile.classList.remove('has-letter');
+    } else {
+        tile.classList.add('has-letter');
+    }
+}
+
+function flipTile2(tileNumber, tileState) {
+    let tile = document.querySelector(`#guessTile${tileNumber}`);
+
+    // console.log(tileState);
+
+    if (tileState === 'backspace') {
+        tile.classList = 'guess__tile';
+    } else {
+        tile.classList.add('flip-in');
+        tile.classList.add(tileState);
+        tile.classList.remove('flip-in');
+        tile.classList.add('flip-out');
+    }
 }
 
 function flipTile(tileNumber, tileState) {
     let tile = document.querySelector(`#guessTile${tileNumber}`);
-    
     tile.classList = 'guess__tile';
     tile.classList.add('flip-in');
-    
+
     setTimeout(() => {
         if (tileState === 'backspace') {
             tile.classList = 'guess__tile';
@@ -184,5 +212,4 @@ function flipTile(tileNumber, tileState) {
         tile.classList.remove('flip-in');
         tile.classList.add('flip-out');
     }, 100);
-
 }
