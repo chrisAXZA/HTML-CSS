@@ -166,7 +166,7 @@ function submitGuess() {
 }
 
 function updateTiles(tileNumber, letter) {
-    let tile = document.querySelector(`#guessTile${tileNumber}`);
+    let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
     // tile.textContent = letter;
     tile.innerText = letter;
     console.log(letter);
@@ -182,7 +182,7 @@ function updateTiles(tileNumber, letter) {
 }
 
 function flipTile2(tileNumber, tileState) {
-    let tile = document.querySelector(`#guessTile${tileNumber}`);
+    let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
 
     console.log(tileState);
 
@@ -197,7 +197,7 @@ function flipTile2(tileNumber, tileState) {
 }
 
 function flipTile(tileNumber, tileState) {
-    let tile = document.querySelector(`#guessTile${tileNumber}`);
+    let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
     tile.classList = 'guess__tile';
     tile.classList.add('flip-in');
 
