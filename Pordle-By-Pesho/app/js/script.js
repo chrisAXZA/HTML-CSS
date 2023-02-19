@@ -20,19 +20,37 @@ console.log(word);
 const submitGuessButton = document.querySelector('#submitBtn');
 submitGuessButton.addEventListener('click', () => {
     const allLetters = currentGuess.dataset.letters.length === 5;
+    const allTilesFlipped = [];
 
     if (allLetters) {
         for (let i = 0; i < 5; i++) {
-            // setInterval(() => {
+            allTilesFlipped.push(new Promise((resolve) => {
+                setTimeout(() => {
+                    revealTile(i + 1, checkLetter(i));
+                    resolve();
+                }, i * 200);
+            }));
+
+            // setTimeout(() => {
             //     revealTile(i + 1, checkLetter(i));
             // }, i * 200);
-            revealTile(i + 1, checkLetter(i));
+            // revealTile(i + 1, checkLetter(i));
         }
 
-        checkWin();
+        const guessCorrect = checkWin();
 
-        guessCount++;
-        currentGuess.dataset.letters = '';
+        if (guessCorrect) {
+            alert('Pesho has guessed the correct word !!!');
+        }
+
+        Promise.all(allTilesFlipped).then(() => {
+            console.log('in Promise', guessCount);
+            guessCount++;
+            currentGuess.dataset.letters = '';
+        });
+
+        // guessCount++;
+        // currentGuess.dataset.letters = '';
     }
 
 });
@@ -44,6 +62,8 @@ document.addEventListener('keydown', (event) => {
     const isBackspace = keypress === "Backspace";
     const isEnter = keypress === "Enter";
     const allLetters = currentGuess.dataset.letters.length === 5;
+
+    // console.log(keypress);
 
     if (isLetter) {
         updateLetters(keypress);
@@ -195,6 +215,8 @@ function updateTiles(tileNumber, letter) {
 
 function flipTile2(tileNumber, tileState) {
     let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
+
+    console.log(guessCount);
 
     // console.log(tileState);
 
