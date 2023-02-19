@@ -28,7 +28,11 @@ submitGuessButton.addEventListener('click', () => {
             // }, i * 200);
             revealTile(i + 1, checkLetter(i));
         }
+        
+        guessCount++;
+        currentGuess.dataset.letters = '';
     }
+
 });
 
 // Detect keypress (letter, backspace, other)
@@ -169,7 +173,7 @@ function updateTiles(tileNumber, letter) {
     let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
     // tile.textContent = letter;
     tile.innerText = letter;
-    console.log(letter);
+    // console.log(letter);
 
     // console.log(tile.classList.length);
 
@@ -184,7 +188,7 @@ function updateTiles(tileNumber, letter) {
 function flipTile2(tileNumber, tileState) {
     let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
 
-    console.log(tileState);
+    // console.log(tileState);
 
     if (tileState === 'backspace') {
         tile.classList = 'guess__tile';
