@@ -14,6 +14,7 @@ const wordList = [
 ];
 const num = chooseRandomWord(wordList);
 const word = wordList[num];
+let guessCount = 1;
 console.log(word);
 
 const submitGuessButton = document.querySelector('#submitBtn');
@@ -55,7 +56,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 function revealTile(tileNumber, tileStatus) {
-    const currentTile = document.querySelector(`#guessTile${tileNumber}`);
+    // const currentTile = document.querySelector(`#guessTile${tileNumber}`);
 
     // if (tileStatus === 'correct') {
     //     // currentTile.classList += ' correct';
@@ -183,7 +184,7 @@ function updateTiles(tileNumber, letter) {
 function flipTile2(tileNumber, tileState) {
     let tile = document.querySelector(`#guessTile${tileNumber}`);
 
-    // console.log(tileState);
+    console.log(tileState);
 
     if (tileState === 'backspace') {
         tile.classList = 'guess__tile';
