@@ -28,7 +28,9 @@ submitGuessButton.addEventListener('click', () => {
             // }, i * 200);
             revealTile(i + 1, checkLetter(i));
         }
-        
+
+        checkWin();
+
         guessCount++;
         currentGuess.dataset.letters = '';
     }
@@ -58,6 +60,12 @@ document.addEventListener('keydown', (event) => {
     //     }
     // }
 });
+
+function checkWin() {
+    const guessIsCorrect = currentGuess.dataset.letters.toUpperCase() === word;
+
+    return guessIsCorrect;
+}
 
 function revealTile(tileNumber, tileStatus) {
     // const currentTile = document.querySelector(`#guessTile${tileNumber}`);
