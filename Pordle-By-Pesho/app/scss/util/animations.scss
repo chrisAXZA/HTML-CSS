@@ -47,3 +47,20 @@
     animation: jump 250ms;
     animation-fill-mode: forwards;
 }
+
+@keyframes lose {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(rem(10));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.lose {
+    animation: lose 250ms;
+    animation-fill-mode: forwards;
+}

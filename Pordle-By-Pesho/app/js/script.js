@@ -46,11 +46,17 @@ submitGuessButton.addEventListener('click', () => {
             });
 
         } else {
-            Promise.all(allTilesFlipped).then(() => {
-                // console.log('in Promise', guessCount);
-                guessCount++;
-                currentGuess.dataset.letters = '';
-            });
+            if (guessCount === 6) {
+                Promise.all(allTilesFlipped).then(() => {
+                    loserTiles();
+                });
+            } else {
+                Promise.all(allTilesFlipped).then(() => {
+                    // console.log('in Promise', guessCount);
+                    guessCount++;
+                    currentGuess.dataset.letters = '';
+                });
+            }
         }
 
         // Promise.all(allTilesFlipped).then(() => {
@@ -107,6 +113,26 @@ function jumpTiles() {
     Promise.all(tilesJumping).then(() => {
         setTimeout(() => {
             alert('Pesho has guessed the correct word !!!');
+        }, 200)
+    });
+}
+
+function loserTiles() {
+    const tilesLosing = [];
+
+    for (let i = 1; i <= 5; i++) {
+        tilesLosing.push(new Promise((resolve) => {
+            setTimeout(() => {
+                let tile = document.querySelector(`#guess${guessCount}Tile${i}`);
+                tile.classList.add('lose');
+                resolve();
+            }, i * 100);
+        }));
+    }
+
+    Promise.all(tilesLosing).then(() => {
+        setTimeout(() => {
+            alert('Pesho was just not able to guess the right word !!!');
         }, 200)
     });
 }
