@@ -40,14 +40,24 @@ submitGuessButton.addEventListener('click', () => {
         const guessCorrect = checkWin();
 
         if (guessCorrect) {
-            alert('Pesho has guessed the correct word !!!');
+            // alert('Pesho has guessed the correct word !!!');
+            Promise.all(allTilesFlipped).then(() => {
+                jumpTiles();
+            });
+
+        } else {
+            Promise.all(allTilesFlipped).then(() => {
+                // console.log('in Promise', guessCount);
+                guessCount++;
+                currentGuess.dataset.letters = '';
+            });
         }
 
-        Promise.all(allTilesFlipped).then(() => {
-            console.log('in Promise', guessCount);
-            guessCount++;
-            currentGuess.dataset.letters = '';
-        });
+        // Promise.all(allTilesFlipped).then(() => {
+        //     // console.log('in Promise', guessCount);
+        //     guessCount++;
+        //     currentGuess.dataset.letters = '';
+        // });
 
         // guessCount++;
         // currentGuess.dataset.letters = '';
@@ -80,6 +90,26 @@ document.addEventListener('keydown', (event) => {
     //     }
     // }
 });
+
+function jumpTiles() {
+    const tilesJumping = [];
+
+    for (let i = 1; i <= 5; i++) {
+        tilesJumping.push(new Promise((resolve) => {
+            setTimeout(() => {
+                let tile = document.querySelector(`#guess${guessCount}Tile${i}`);
+                tile.classList.add('jump');
+                resolve();
+            }, i * 100);
+        }));
+    }
+
+    Promise.all(tilesJumping).then(() => {
+        setTimeout(() => {
+            alert('Pesho has guessed the correct word !!!');
+        }, 200)
+    });
+}
 
 function checkWin() {
     const guessIsCorrect = currentGuess.dataset.letters.toUpperCase() === word;
@@ -216,8 +246,6 @@ function updateTiles(tileNumber, letter) {
 function flipTile2(tileNumber, tileState) {
     let tile = document.querySelector(`#guess${guessCount}Tile${tileNumber}`);
 
-    console.log(guessCount);
-
     // console.log(tileState);
 
     if (tileState === 'backspace') {
@@ -227,6 +255,10 @@ function flipTile2(tileNumber, tileState) {
         tile.classList.add(tileState);
         tile.classList.remove('flip-in');
         tile.classList.add('flip-out');
+
+        setTimeout(() => {
+            tile.classList.remove('flip-out');
+        }, 300)
     }
 }
 
