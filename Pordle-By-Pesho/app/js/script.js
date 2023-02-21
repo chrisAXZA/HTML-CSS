@@ -68,7 +68,6 @@ submitGuessButton.addEventListener('click', () => {
         // guessCount++;
         // currentGuess.dataset.letters = '';
     }
-
 });
 
 // Detect keypress (letter, backspace, other)
